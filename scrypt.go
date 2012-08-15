@@ -1,3 +1,6 @@
+// http://my.oschina.net/Jacker/blog/32837
+
+// Two way encipherment ported from PHP.
 package scrypt
 
 import (
