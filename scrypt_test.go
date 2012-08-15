@@ -1,11 +1,12 @@
 package scrypt
 
-import "testing"
+import (
+	"fmt"
+)
 
-func TestCrypt(t *testing.T) {
-	s := "abcdefgh"
-	d := Encrypt(s, "key")
-	if dd := Decrypt(d, "key"); dd != s {
-		t.Errorf("Source(%v) != Decrypt(Encrypt)(%v)", s, dd)
-	}
+func ExampleEncrypt() {
+	e := Encrypt("123456789", "salt")
+	d := Decrypt(e, "salt")
+	fmt.Println(d)
+	// Output: 123456789
 }
